@@ -46,8 +46,6 @@ for i in range(httpSamples.__len__()):
                 tuple:"array",
                 bool:"boolean"
             }
- 
- 
             parameters.append({"in":"header","name":"Authorization","default":token,"required":True,"type":"string"})
             parameters.append({"in":"body","name":model,"description":model,"required":True,"schema":{"$ref":'#/definitions/'+definition_name}})
             properties = {}
@@ -59,7 +57,6 @@ for i in range(httpSamples.__len__()):
  
                 properties.setdefault(key,{"type":tp,"example":value})
             definitions.setdefault(definition_name,{"type": "object", "properties": properties, "title": definition_name})
- 
         except Exception as e:
             res = "{\""+ str(queryString).replace("=","\":\"").replace("&","\",\"")+"\"}"
             body = json.loads(res)
