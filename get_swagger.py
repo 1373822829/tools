@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Time    : 2019/10/29
+# @Author  : wangjie
+# @File    : tests.py
+# @Software: PyCharm
+
 import xml.etree.ElementTree as ET
 path = r'C:\Users\Administrator\Desktop\test.xml' #jmeter报告jtl文件jtl文件路径 
 tree = ET.parse(path)
