@@ -94,5 +94,5 @@ swagger_json.setdefault("definitions",definitions)
 swagger_json.setdefault("paths",paths)
 print(swagger_json)
 data = json.dumps(swagger_json)
-with open("jmeter.json","w",encoding="utf8") as file:
+with open("swagger.json","w",encoding="utf8") as file:
     file.writelines(data)
