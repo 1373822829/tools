@@ -18,3 +18,5 @@
 >>python get_swagger.py
 
 3. 将swagger.json文件导入swagger-ui平台。
+
+详细说明：https://testerhome.com/topics/21123
