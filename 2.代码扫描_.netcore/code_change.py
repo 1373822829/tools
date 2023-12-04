@@ -15,7 +15,7 @@ from datetime import date
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
-from day01.poxy import MyGit
+from scanner import MyGit
 
 
 class Ui_MainWindow(object):
