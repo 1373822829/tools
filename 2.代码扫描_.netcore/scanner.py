@@ -483,7 +483,6 @@ class MyGit(object):
             change_api['apis'] = list(set(change_api['apis']))
             self.change_api_infos.append(change_api)
 
-        # change_api_infos = [{'filepath': 'F:\\福禄网络\\FP\\sup-fp-order-interface\\src\\Sup.Fp.Order.Interface.Domain\\Services\\ProductService.cs', 'apis': ['GetProductPoolProductList']}]
         for change_api in self.change_api_infos:
             for api in change_api['apis']:
                 self.get_controller_api(change_api['filepath'],api)
@@ -494,23 +493,6 @@ class MyGit(object):
 
 
 
-if __name__ == '__main__':
-    local_path = 'E:\福禄网络\FP\sup-fp-merchant-business'
-    repo_url = ""
-    source_branch = "develop"
-    target_branch = "beta/20221118/商品密价优化"
-    mgit = MyGit(local_path, repo_url)
-    change_files = mgit.diff_files(source_branch, target_branch)
-    # print(change_files)
-    if change_files != '':
-        change_files = change_files.split('\n')
-        apis = mgit.get_change_apis(source_branch, target_branch, change_files)
-        print(apis)
-
-
-
-
-    # get_method("E:\福禄网络\FP\sup-fp-message-interface\src\Sup.Fp.Message.Interface.Domain\Services\Extensions\SupProductExtendService.cs")
 
 
 
